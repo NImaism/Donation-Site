@@ -1,0 +1,134 @@
+<!DOCTYPE>
+<html lang="fa_IR" dir="rtl">
+<head>
+    <meta name="theme-color" content="#980105" >
+    <link href="img/logo350x350.png" rel="shortcut icon">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../Static/Css/Style.css">
+    <style>
+        .emoji .checkholder{
+            position: absolute;
+            font-size: 25px;
+            color: #3faa00;
+            left: 5px;
+            bottom: 0px;
+            background: #fff;
+            border-radius: 20px;
+            display: none;
+        }
+        .emoji.active .checkholder{
+            display: block;
+        }
+    </style>
+        <link rel="shortcut icon" href="../Static/Img/Coffe.png" type="image/x-icon" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="nimaism, golang, developer, programmer, young programmer, gin, idpay">
+    <meta name="description" content="صفحه خرید قهو از nimaism">
+    <meta name="author" content="nimaism.ir">
+    <meta property="og:image" content="https://s6.uupload.ir/files/1654516381483_yciw.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>NImaism Home</title>
+    <script type='text/javascript' src='../Static/Js/jquery.min.js'></script>
+    <script type='text/javascript' src='../Static/Js/jquery.farsiInput.js'></script>
+    <script type='text/javascript' src='../Static/Js/Script.js'></script>
+    <style type="text/css">
+        .paypage .payform .inform .topbuttons{
+            background-color: #980105;
+        }
+        .paypage .payform .inform .topbuttons:hover{
+            background-color: #04a30f;
+        }
+        input[type="submit"],button{
+            background-color: #980105 ;
+        }
+        input[type="submit"]:hover,button:hover{
+            background-color: #04a30f;
+        }
+        input[type="submit"]:active,button:active{
+            background-color: #980105;
+        }
+        .inform{
+            box-shadow: 0px 0px 15px lightskyblue;
+        }
+
+    </style>
+
+</head>
+<body class="paypage" id="body" onload="bodyloaded()">
+<div class="payform">
+
+    <div class="avatar">
+        <div class="avatarstoke">
+            <img src="https://s6.uupload.ir/files/1654516381483_yciw.jpg">
+        </div>
+    </div>
+    <div class="inform">
+        <div class="pay">
+            <div class="titleinfo" style="margin: 18px 0 0 0;"></div>
+            <h1>Nimaism</h1>
+            <div class="linksholder">
+                <div class="inner" style="padding: 5px;">
+                    <a href="https://instagram.com/nima._.ism" target="_blank" rel="nofollow"><div class="item"><img src="../Static/Img/instagram.png"><div class="tooltip"><div class="inner   ">Instagram</div></div></div></a><a href="https://github.com/nimaism" target="_blank" rel="nofollow"><div class="item"><img src="../Static/Img/github.png"><div class="tooltip"><div class="inner">Github</div></div></div></a>								</div>
+            </div>
+            <div class="userdesc" style="margin-top:20px;">
+                منتظر چی هستی ؟
+               حمایتم کن 
+            </div>
+            <form action="https://nimaism.ir/Donate" method="post" onsubmit="formSubmitted()">
+                <input type="hidden" name="donate">
+                <table width="100%">
+                    <tr>
+                        <td colspan="2"><input type="number" name="price" id="text1x" style="direction: rtl;font-size:18px;" min="2000" max="50000000" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required autofocus placeholder="مبلغ به تومان " value=""></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="text" name="name" onkeydown="nameChanged()" required maxlength="50"  placeholder="اسمت چیه ستونم ؟" value="" style="font-size:16px;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <input type="text" name="nesbat" maxlength="50"  placeholder="نسبت شما با من ؟" value="">
+                        </td>
+                        <td colspan="1"><input type="text" name="nasihat" id="numberinput"  maxlength="15" placeholder="نصیحت داری به من ؟" value=""></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea name="description" maxlength="300"  placeholder="حرفی داری بهم بگی ؟" ></textarea></td>
+                    </tr>
+                    
+                </tr>									</table>
+                <div style="display:flex;justify-content: center;align-items: center;">
+                    <div style="width:100%;"><center><button id="submitformbtn">پرداخت</button> <div id="xInfoChangeProgressx" style="margin: 10px 0px 0px;display: none;"><img src="../Static/Img/loading.svg" style="width: 30px;vertical-align: middle;">درحال ارتباط با درگاه پرداخت</div></center></div>
+                </div>
+            </form>
+            <script type="text/javascript">
+               
+                function nameAmountCheck(obj){
+                    document.getElementById("showdesc").disabled = !obj.checked;
+                    document.getElementById("showdesc").checked =obj.checked;
+                }
+
+                function formSubmitted() {
+                    $("#submitformbtn").css('display','none');
+                    $("#xInfoChangeProgressx").css('display','');
+                }
+                var english = /^[A-Za-z0-9]*$/;
+                function nameChanged(){
+                    if(english.test((((((($('input[name="name"]').val().split(' ').join('')).split(')').join(''))).split('(').join('')).split('?').join('')).split('!').join('')).split('@').join(''))){
+                        $('input[name="name"]').css('direction','ltr');
+                    }else{
+                        $('input[name="name"]').css('direction','rtl');
+                    }
+                };
+            </script>
+        </div>
+    </div>
+</div>
+<a href="https://nimaism.ir" target="_blank" style="text-decoration: none;">
+    <div class="bynimaism">
+        <script src="https://static.idpay.ir/trust.js?id=97926547&width=30"></script>
+        <div class="details" style="color:#fff;font-family: Dana;">توسعه و طراحی توسط نیما غلامی<br>2022</div>
+    </div>
+</a>
+</body>
+</html>
+
+<!--  Tnx Sibmo | Clean Code  -->

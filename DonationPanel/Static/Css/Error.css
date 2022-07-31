@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Base';
+    src: url("../Font/ISDNFa.ttf")
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Base";
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: 100vh;
+
+    animation-name: animate;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:
+            radial-gradient(
+                    circle 600px at 20% 40%,
+                    rgba(255, 255, 255, 0.6) 40%,
+                    rgba(145, 190, 212, 0.4)
+            ),
+            radial-gradient(
+                    circle 600px at 60% 60%,
+                    rgba(255, 255, 255, 0.7) 50%,
+                    rgba(145, 190, 212, 0.3)
+            ),
+            linear-gradient(
+                    20deg,
+                    rgb(243, 65, 25),
+                    rgba(48, 66, 105)),
+            linear-gradient(
+                    -18deg,
+                    rgba(48, 66, 105),
+                    rgb(243, 65, 25) 25% ,
+                    rgba(48, 66, 105) 85%);
+    background-blend-mode:
+            color-burn,
+            color-burn,
+            overlay
+}
+
+.Main{
+    background-color: #fb3838;
+    backdrop-filter  : blur(10px);
+    width: 40vh;
+    height: 34vh;
+    border-radius: 15px;
+    box-shadow: 0 0 15px orange;
+    margin: 10px auto;
+    padding: 12px;
+}
+
+#T1 {
+    position: relative;
+    text-align: center;
+    top: 3vh;
+}
+
+
+#submit{
+    position: relative;
+    top: 10px;
+    left: -13px;
+    border: none;
+    border-radius: 10px;
+    width: 40vh;
+    height: 7vh;
+    text-align: center;
+    outline: none;
+    background-color: #e9cdbe;
+    box-shadow: 0 0 15px orange;
+
+}
+
+#Error {
+    position:relative;
+    right: -38px;
+    text-shadow: 0px 0px 10px #0af6d2;
+    top: -12px;
+    font-size: 14px;
+}
+
+
+.ErrorInfo {
+    margin: 41px auto;
+    font-size: 16px;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 20px;
+    width: 30vh;
+    height: 10vh;
+    box-shadow: 0 0 15px orange;
+}
+
+
+@keyframes animate {
+    0% {
+        background-size:
+                100%,
+                100%,
+                100%,
+                100%;
+        background-position:
+                center,
+                top,
+                center,
+                center;
+    }
+    100% {
+        background-size:
+                500%,
+                400%,
+                200%,
+                300%;
+        background-position:
+                right,
+                left,
+                center,
+                top;
+    }
+}
